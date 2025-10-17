@@ -1,0 +1,163 @@
+.info-box{
+    gap: 0.75rem;
+    font-family: sans-serif;
+}
+
+ .info-icon {
+    font-size: 1.5rem;
+    color: #f7b733;
+  }
+
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+    .info-text small {
+    color: #999;
+    font-size: 0.8rem;
+  }
+
+  .info-text strong {
+    font-size: 1rem;
+  }
+
+  .recipe-picture-div{
+    width: 90%;
+  height: 400px;
+
+    display: flex;
+    justify-self: center;
+    margin: 0 0 50px 0;
+    
+  }
+
+  
+  .recipe-picture{
+     width: 100%;
+     height: 100%;
+  object-fit: cover;
+  image-rendering: auto; /* yüksek kalite render */
+  border-radius: 12px;
+  
+  }
+
+  .recipe-title{
+    margin:0 3% 0 3%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .recipe-description{
+    padding: 20px 100px 20px 100px;
+    margin:0 3% 0 5%;
+
+    margin-left: 3%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .gude{
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 20px;
+ 
+  }
+  .ins-title{
+    margin-right: 90px;
+  }
+  .ingred-title{
+    margin-right: 20px;
+  }
+
+  .instructions{
+       background-color: #fff; /* beyaz */
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.16); /* yumuşak gölge */
+  }
+
+  .ingredients{
+       background-color: #fff; /* beyaz */
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.16); /* yumuşak gölge */
+  }
+  /* --- Masaüstü görünüm --- */
+  .tab-buttons {
+    display: none; /* masaüstünde tab butonlarını gizle */
+  }
+
+ 
+  #aciklama, #malzemeler, #yapilis {
+  display: block;
+}
+  @media(max-width: 600px){
+      .recipe-picture-div{
+    width: 100%;
+  height: 300px;
+
+    display: flex;
+    justify-self: center;
+    margin: 0 0 15px 0;
+    
+  }
+
+  
+ .info-icon {
+    font-size: 1.2rem;
+    color: #f7b733;
+  }
+
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+
+    .info-text small {
+    color: #999;
+    font-size: 0.7rem;
+  }
+
+  .info-text strong {
+    font-size: 0.9rem;
+  }
+
+  .recipe-name{
+    margin: 0 !important; 
+  }
+       .tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 0.7em;
+  }
+
+  .tab-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #eee;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .tab-buttons button.active {
+    background: #ffcc66;
+  }
+ 
+
+#aciklama,
+#malzemeler,
+#yapilis {
+  display: none;
+  text-align: start;
+}
+
+#aciklama.active,
+#malzemeler.active,
+#yapilis.active {
+  display: block;
+}
+  .recipe-description{
+    padding: 0;
+  }
+  }

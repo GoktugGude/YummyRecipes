@@ -1,0 +1,39 @@
+@font-face{
+    font-family: 'BaslikFont2';
+    src: url(fonts/Dynamo\ MN\ Bold.TTF) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+span{
+    font-family: 'BaslikFont2';
+    font-size: larger;
+}
+
+.poster-div{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.poster-img{
+    border-radius: 15px;
+    height: 250px;
+    width: 100%;
+}
+
+.baslik{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+ul {
+    gap: 40px;
+}
+
+@media(max-width: 600px){
+    ul{
+        gap: 0;
+    }
+}
