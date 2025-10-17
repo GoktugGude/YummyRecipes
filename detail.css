@@ -3,7 +3,7 @@
     font-family: sans-serif;
 }
 
-
+.arrow{display: none;}
 
  .info-icon {
     font-size: 1.5rem;
@@ -170,5 +170,19 @@
 }
   .recipe-description{
     padding: 0;
+  }
+  img{
+    position: relative;
+  }
+  .arrow{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    font-size: 50px;
+  }
+  .arrow a{
+    color: white;
+
   }
   }
