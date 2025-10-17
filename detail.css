@@ -94,6 +94,7 @@
 }
   @media(max-width: 600px){
 .info-box{
+    gap: 0.3rem;
   padding: 0;
 }
 .recipe-preinfo{
