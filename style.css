@@ -105,13 +105,13 @@ h2{
     content: url('Adsız\ tasarım\ \(4\).png');
     height: 200px;
     width: 700px;
-    min-width: 500px;
 
 }
 .ilk-foto img{
     width: 100%;
 }
 .ilk-foto{
+ width: 100%;
     height: auto;
 }
 }
