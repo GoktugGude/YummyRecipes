@@ -136,7 +136,7 @@ h2{
  .kartlik-container{
     padding: 0px;
     grid-template-columns: repeat(1,1fr);
-   gap: 54px;
+   gap: 24px;
 }
 .kartlik{
     display: flex;
@@ -154,7 +154,7 @@ h2{
 h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 24px;
-    margin-top: 20px;
+    margin: 20px;
 }
 .ilk-foto img{
     content: url('Adsız\ tasarım\ \(4\).png');
