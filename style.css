@@ -42,7 +42,7 @@ h2{
 }
 
 .kartlik-container{
-    padding: 30px 100px;
+    padding: 30px 200px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
@@ -53,10 +53,34 @@ h2{
     justify-content: end;
     padding: 0 20px 0 0;
 }
+.buton a{
+    margin-top: 10px;
+}
+.uc-ikon{
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px 15px 0;
+    gap: 5px;
+}
+.uc-ikon i{
+    font-size: 15px;
+}
 .kartlik-yazi{
-    padding: 10px 0 20px 10px;
+    padding: 10px 0 10px 10px;
 }
 
+
+h3{
+    margin: 0px;
+}
+
+@media(max-width: 1660px) {
+ .kartlik-container{
+    padding: 40px;
+    grid-template-columns: repeat(4,1fr);
+   gap: 30px;
+}
+}
 @media(max-width: 1400px) {
  .kartlik-container{
     padding: 40px;
@@ -95,7 +119,7 @@ h2{
     height: 100%;
 }
 .kartlik-yazi{
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 20px 10px;
 }
 h2{
     font-size: 40px;
