@@ -13,11 +13,13 @@ hr{
     color: orange;
 }
 
-span{
+.container-fluid a span{
     font-family: 'BaslikFont2';
     font-size: larger;
 }
-
+.abc{
+    --bs-btn-padding-x: 0.1rem !important;
+}
 .poster-div{
     max-width: 100%;
     height: auto;

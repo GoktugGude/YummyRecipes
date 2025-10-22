@@ -38,7 +38,6 @@ align-items: center;
     padding: 0;
 }
 .ilk-foto{
-    border: solid 2px black;
     height: 350px;
 }
 .ilk-foto img{
@@ -103,8 +102,21 @@ h2{
 h3{
     margin: 0px;
 }
-
-@media(max-width: 1660px) {
+@media(min-width: 3000px) {
+ .kartlik-container{
+    padding: 40px;
+    grid-template-columns: repeat(6,1fr);
+   gap: 30px;
+}
+}
+@media(max-width: 3000px) {
+ .kartlik-container{
+    padding: 40px;
+    grid-template-columns: repeat(5,1fr);
+   gap: 30px;
+}
+}
+@media(max-width: 2400px) {
  .kartlik-container{
     padding: 40px;
     grid-template-columns: repeat(4,1fr);
@@ -157,7 +169,7 @@ h2{
     margin: 20px;
 }
 .ilk-foto img{
-    content: url('Adsız\ tasarım\ \(4\).png');
+    content: url('responsive\ \(2\).png');
     height: 200px;
     width: 700px;
 
@@ -168,5 +180,12 @@ h2{
 .ilk-foto{
  width: 100%;
     height: auto;
+}
+body{
+    background-image: url(background-size\ cover;.png);
+    background-position: center ;  
+     background-repeat: repeat-y;
+     background-size: 200%;
+    
 }
 }
