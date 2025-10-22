@@ -4,6 +4,78 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.kartlik {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* 3D görünüm için */
+}
+
+.kartlik-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.kartlik:hover .kartlik-inner {
+  transform: rotateY(180deg);
+
+}
+
+/* Ön ve arka yüz ortak stil */
+.kartlik-front, .kartlik-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+/* Ön yüz */
+.kartlik-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Görsel */
+.kartlik-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Arka yüz */
+.kartlik-back {
+  transform: rotateY(180deg);
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* İkonlar */
+.info-icon {
+  color: #ff5e00;
+  font-size: 20px;
+}
+
+.kartlik-yazi h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+
+
 body{
     background-image: url(background-size\ cover;.png);
     background-position: center;  
@@ -118,7 +190,7 @@ h3{
 }
 @media(max-width: 2400px) {
  .kartlik-container{
-    padding: 40px;
+    padding: 40 px;
     grid-template-columns: repeat(4,1fr);
    gap: 30px;
 }
