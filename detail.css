@@ -1,188 +1,263 @@
-.info-box{
+.info-box {
     gap: 0.75rem;
     font-family: sans-serif;
 }
 
-.arrow{display: none;}
+.row {
+    --bs-gutter-x: 0 !important;
+}
 
- .info-icon {
+.info-icon {
     font-size: 1.5rem;
     color: #f7b733;
-  }
+}
 
-  .info-text {
+.info-text {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
-  }
+}
 
     .info-text small {
-    color: #999;
-    font-size: 0.8rem;
-  }
+        color: #999;
+        font-size: 0.75rem;
+    }
 
-  .info-text strong {
-    font-size: 1rem;
-  }
+    .info-text strong {
+        font-size: 0.93rem;
+        font-weight: 600;
+    }
 
-  .recipe-picture-div{
-    width: 90%;
-  height: 400px;
-
+.recipe-picture-div {
+    width: 100%;
+    height: 400px;
+    padding: 30px 0 0 30px;
     display: flex;
-    justify-self: center;
-    margin: 0 0 50px 0;
-    
-  }
+    margin: 50px 0 50px 20px;
+}
 
-  
-  .recipe-picture{
-     width: 100%;
-     height: 100%;
-  object-fit: cover;
-  image-rendering: auto; /* yüksek kalite render */
-  border-radius: 12px;
-  
-  }
 
-  .recipe-title{
-    margin:0 3% 0 3%;
+.recipe-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto; /* yüksek kalite render */
+     -webkit-border-radius: 78px;
+border-radius: 78px  0 78px;
+}
+
+.recipe-title {
+    margin: 0 3% 0 3%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  .recipe-description{
-    padding: 20px 100px 20px 100px;
-    margin:0 3% 0 5%;
+}
 
+.recipe-description {
+    margin: 0 3% 0 5%;
     margin-left: 3%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+}
 
-  .gude{
+.gude {
     gap: 10px;
     justify-items: center;
     margin-bottom: 20px;
- 
-  }
-  .ins-title{
+}
+
+.ins-title {
     margin-right: 90px;
-  }
-  .ingred-title{
+}
+
+.ingred-title {
     margin-right: 20px;
-  }
+}
 
-  .instructions{
-       background-color: #fff; /* beyaz */
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.16); /* yumuşak gölge */
-  }
+.instructions {
+    background-color: #fff; /* beyaz */
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.16); /* yumuşak gölge */
+}
 
-  .ingredients{
-       background-color: #fff; /* beyaz */
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.16); /* yumuşak gölge */
-  }
-  /* --- Masaüstü görünüm --- */
-  .tab-buttons {
+.ingredients {
+    background-color: #fff; /* beyaz */
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.16); /* yumuşak gölge */
+}
+/* --- Masaüstü görünüm --- */
+.tab-buttons {
     display: none; /* masaüstünde tab butonlarını gizle */
-  }
-
- 
-  #aciklama, #malzemeler, #yapilis {
-  display: block;
-}
-  @media(max-width: 600px){
-.info-box{
-    gap: 0.3rem;
-  padding: 0;
-}
-.recipe-preinfo{
-  justify-content: space-around !important;
-  padding: 0;
 }
 
-      .recipe-picture-div{
-    width: 100%;
-  height: 220px;
+.deneme {
+    display: grid;
+    grid-template-areas:
+        "resim baslik"
+        "resim preinfo"
+        "resim aciklama"
+        "tabs tabs";
+    grid-template-columns: 450px 1fr;
+    gap: 30px;
+}
 
+/* Grid alanları */
+.recipe-picture-div {
+    grid-area: resim;
+}
+
+.recipe-title {
+    grid-area: baslik;
+}
+
+.recipe-preinfo {
+    grid-area: preinfo;
     display: flex;
-    justify-self: center;
-    margin: 0 0 15px 0;
-    
-  }
-
-  
- .info-icon {
-    font-size: 1rem;
-    color: #f7b733;
-  }
-
-  .info-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.3;
-  }
-
-    .info-text small {
-    color: #999;
-    font-size: 0.68rem;
-  }
-
-  .info-text strong {
-    font-size: 0.8rem;
-  }
-
-  .recipe-name{
-    margin: 0 !important; 
-  }
-       .tab-buttons {
-    display: flex;
-    gap: 10px;
-    padding: 10px 20px;
-  }
-
-  .tab-buttons button {
-    flex: 1;
-    padding: 8px;
-    border: none;
-    background: #eee;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-
-  .tab-buttons button.active {
-    background: #ffcc66;
-  }
- 
-
-#aciklama,
-#malzemeler,
-#yapilis {
-  display: none;
-  text-align: start;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-#aciklama.active,
-#malzemeler.active,
-#yapilis.active {
-  display: block;
+.recipe-description {
+    grid-area: aciklama;
 }
-  .recipe-description{
-    padding: 0;
-  }
-  img{
-    position: relative;
-  }
-  .arrow{
+
+.gude {
+    grid-area: tabs;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#aciklama, #malzemeler, #yapilis {
     display: block;
-    position: absolute;
-    top: 0;
-    left: 15px;
-    font-size: 50px;
-  }
-  .arrow a{
-    color: white;
+}
 
-  }
-  }
+@media(max-width: 1400px) {
+    .recipe-preinfo {
+        justify-content: space-around !important;
+        padding: 0;
+    }
+
+    .deneme {
+        grid-template-columns: 350px 1fr;
+        gap: 20px;
+    }
+}
+
+@media(max-width: 970px) {
+    .info-box {
+        gap: 0.3rem;
+        padding: 0;
+    }
+
+    .deneme {
+        display: block;
+    }
+
+    .recipe-picture-div,
+    .recipe-title,
+    .recipe-preinfo,
+    .recipe-description,
+    .gude {
+        margin-bottom: 1rem;
+    }
+
+    .recipe-preinfo {
+        justify-content: space-around !important;
+        padding: 0;
+    }
+
+    .recipe-picture-div {
+        padding: 0;
+        width: 100%;
+        height: 220px;
+        display: flex;
+        justify-self: center;
+        margin: 0 0 15px 0;
+    }
+
+
+    .info-icon {
+        font-size: 1rem;
+        color: #f7b733;
+    }
+
+    .info-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+    }
+
+        .info-text small {
+            color: #999;
+            font-size: 0.68rem;
+        }
+
+        .info-text strong {
+            font-size: 0.8rem;
+        }
+
+    .recipe-name {
+        margin: 0 !important;
+    }
+
+    .tab-buttons {
+        display: flex;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+        .tab-buttons button {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            background: #eee;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+            .tab-buttons button.active {
+                background: #ffcc66;
+            }
+
+
+    #aciklama,
+    #malzemeler,
+    #yapilis {
+        display: none;
+        text-align: start;
+    }
+
+        #aciklama.active,
+        #malzemeler.active,
+        #yapilis.active {
+            display: block;
+        }
+
+    .recipe-description {
+        padding: 0;
+    }
+
+    img {
+        position: relative;
+    }
+
+    .arrow {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-size: 50px;
+    }
+
+        .arrow a {
+            color: white;
+        }
+
+    .poster-div {
+        width: 100%;
+    }
+
+    .poster-img {
+        width: 100px;
+    }
+}

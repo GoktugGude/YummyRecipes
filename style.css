@@ -1,0 +1,117 @@
+@font-face{
+    font-family: 'BaslikFont3';
+    src: url(fonts/The\ Queen\ Marker.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.ilk-foto{
+    border: solid 2px black;
+    height: 350px;
+}
+.ilk-foto img{
+    width: 100%;
+    height: 350px;
+}
+h2{
+    width: 100%;
+    font-family: 'BaslikFont3';
+    font-size: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.kartlik{
+    width: 300px;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+.kartlik-img{
+    width: 100%;
+    height: 200px;
+}
+.kartlik-img img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+}
+
+.kartlik-container{
+    padding: 30px 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    justify-items: center;
+}
+.buton{
+    display: flex;
+    justify-content: end;
+    padding: 0 20px 0 0;
+}
+.kartlik-yazi{
+    padding: 10px 0 20px 10px;
+}
+
+@media(max-width: 1400px) {
+ .kartlik-container{
+    padding: 40px;
+    grid-template-columns: repeat(3,1fr);
+   gap: 30px;
+}
+}
+
+@media(max-width: 1100px) {
+ .kartlik-container{
+    padding: 20px;
+    grid-template-columns: repeat(2,1fr);
+   gap: 54px;
+}
+
+h2{
+    font-size: 40px;
+    margin-top: 30px;
+}
+}
+
+@media(max-width: 780px) {
+ .kartlik-container{
+    padding: 0px;
+    grid-template-columns: repeat(1,1fr);
+   gap: 54px;
+}
+.kartlik{
+    display: flex;
+    width: 90vw;
+    height: 200px;
+
+}
+.kartlik-img{
+    width: 100%;
+    height: 100%;
+}
+.kartlik-yazi{
+    padding: 20px 0 20px 20px;
+}
+h2{
+    font-size: 40px;
+    margin-top: 20px;
+}
+.ilk-foto img{
+    content: url('Adsız\ tasarım\ \(4\).png');
+    height: 200px;
+    width: 700px;
+    min-width: 500px;
+
+}
+.ilk-foto img{
+    width: 100%;
+}
+.ilk-foto{
+    height: auto;
+}
+}
