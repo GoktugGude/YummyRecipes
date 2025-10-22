@@ -75,7 +75,7 @@ h2{
     padding: 30px 200px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    gap: 80px;
     justify-items: center;
 }
 .buton{
